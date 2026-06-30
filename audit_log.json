@@ -453,5 +453,385 @@
     "appeal_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren't well-known.",
     "appealed_at": "2026-06-30T22:32:36.955Z",
     "text": "In 2018 companies continue to look for ways to cut through the noise, create mindshare, and establish themselves and both experts and influencers. AI-driven marketing, social targeting, and general content marketing are the predominant solution for most, but the biggest shift right now is in the channels being used to distribute this thought leadership."
+  },
+  {
+    "content_id": "0e8ee628-9ec0-47bc-b678-639875a015d3",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:16.180Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "18829f19-ba36-40c8-a8b1-73c4042fb70d",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:16.695Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "ef3c03f7-e1c3-4749-bf4d-ce7da2ce13fc",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:17.170Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "ff1ba692-b55e-4536-a384-6fac8abea3d9",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:17.668Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "45730bca-89af-4b2a-9169-667caaf840e1",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:18.029Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "b381bcab-6299-4377-b2d7-e2247a8ffb37",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:18.685Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "82810433-0be0-4a4d-b0f2-b884d75fdff1",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:19.116Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "eea6871f-e66d-4261-88dc-85b11e44ba5f",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:19.549Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "50cb0273-c5d3-4374-ab67-34b184a15cb7",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:25.860Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "676bec56-6c42-471f-be3d-ee3031b33099",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:41:26.401Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "dbfe69ad-5d70-4d99-9b3b-37a97d836c27",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:07.255Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "80584037-3bff-4d4f-ba05-8db164fee9c7",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:07.622Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "d95b96dc-a833-4c75-bab7-08a117f63a6d",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:08.182Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "21942692-1196-4959-9803-c112dfec9dd9",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:08.802Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "d617d23c-33e1-4c8d-b50d-536541819ad6",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:09.296Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "4f753893-2655-40ae-b37c-871b3119c500",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:09.888Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "e8ca0b78-b73f-4301-9185-4da6f21a7832",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:10.336Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "8abb43aa-5e95-4fd7-b4c0-828c1a7f06cc",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:10.817Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "2f4fb303-0bbb-4aea-918f-fd00aaff2f81",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:11.379Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "2458ea2c-420f-4053-a5d9-96114a91b08a",
+    "creator_id": "ratelimit-test",
+    "timestamp": "2026-06-30T22:50:11.690Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.6,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "This is a test submission for rate limit testing purposes only."
   }
 ]

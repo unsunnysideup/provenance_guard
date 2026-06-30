@@ -1,0 +1,32 @@
+[
+  {
+    "content_id": "e69f0978-e302-45ef-9563-5b77e445a8e3",
+    "creator_id": "test-user-1",
+    "timestamp": "2026-06-30T19:54:12.090Z",
+    "attribution": "likely_human",
+    "confidence": 0.8,
+    "llm_score": 0.8,
+    "status": "classified",
+    "text": "hello there"
+  },
+  {
+    "content_id": "ee5ab0f5-33ad-4f92-9ef9-dc58374ac0be",
+    "creator_id": "test-user-1",
+    "timestamp": "2026-06-30T19:55:28.170Z",
+    "attribution": "likely_human",
+    "confidence": 0.9,
+    "llm_score": 0.9,
+    "status": "classified",
+    "text": "Let me tidy the stale docstring before sharing"
+  },
+  {
+    "content_id": "fec3c6eb-dc76-4c6d-9623-d8369c7384ec",
+    "creator_id": "test-user-1",
+    "timestamp": "2026-06-30T19:56:20.936Z",
+    "attribution": "likely_human",
+    "confidence": 0.9,
+    "llm_score": 0.9,
+    "status": "classified",
+    "text": "The sun dipped below the horizon, painting the sky in hues of amber and rose. I sat on the porch, coffee in hand, watching the neighborhood slowly go quiet."
+  }
+]

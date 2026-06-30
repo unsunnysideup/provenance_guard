@@ -68,10 +68,12 @@ submission and status update enters into audit log and outputs a response.
 ## AI Tool Plan
 I'll be using AI to implement these pipelines as demonstrated in the architecture. 
 
-For my third checkpoint, which includes the implementation of the subission endpoint and first signal, I'll provide Claude my detection signals section and the architecture diagram to generate the Flash app skeleton and the LLM based function. I'll verify the output with several test cases with few inputs before wiring into the endpoint. 
+For my third checkpoint, which includes the implementation of the submission endpoint and first signal, I'll provide Claude my detection signals section and the architecture diagram to generate the Flash app skeleton and the LLM based function. I'll verify the output with several test cases with few inputs before wiring into the endpoint. 
 
 For my fourth checkpoint, which includes the implementation of the second signal and confidence scoring, I'll provide Claude my specs on detection signals, uncertainty representation and architecture diagram to generate the second signal functon and scoring logic. I'll then verify whether the scores vary meaningful between clearly AI and clearly human text.
 
 For my fifth checkpoint, which includes the implementation of the production layer, I'll provide Claude my label variants, appeals workflow and architecture diagram to generate the label generation logic and appeal enpoint. I'll verify by testing all three label variants are reachable and that an appeal updates status correctly. 
+
+
 
 

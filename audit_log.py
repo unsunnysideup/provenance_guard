@@ -1,21 +1,21 @@
 """
 Audit log: an append-only, file-backed structured log.
 
-Every call to /submit writes one entry here. Per the architecture diagram,
-the Appeal flow (Milestone 5) will also write status updates into this same
-log. Using a JSON file (rather than print statements or an in-memory dict)
-so entries are structured, inspectable, and survive server restarts.
-
 Entry schema (per spec):
     {
         "content_id": str,
         "creator_id": str,
         "timestamp": str (ISO 8601, UTC, e.g. "2025-04-01T14:32:10.123Z"),
-        "attribution": str,      # e.g. "likely_ai" / "likely_human"
-        "confidence": float,     # overall confidence (placeholder until
-                                  # majority-vote scoring exists — Milestone 4)
-        "llm_score": float,      # signal 1's own self-reported confidence
-        "status": str,           # "classified" | "appealed" | "resolved" ...
+        "attribution": str,            # "likely_ai" | "uncertain" | "likely_human" (code)
+        "transparency_label": str,     # user-facing label text, per spec wording
+        "confidence": float,           # combined majority-vote confidence (0.0/0.5/1.0)
+        "llm_score": float,            # signal 1's self-reported confidence (0-1)
+        "stylometric_score": float,    # signal 2's combined heuristic score (0-1)
+        "votes": dict,                 # each signal's individual binary vote
+        "status": str,                 # "classified" | "under_review" | ...
+        "appeal_filed": bool,           # explicit flag, set True on appeal
+        "appeal_reasoning": str|None,  # creator's reasoning, set on appeal
+        "appealed_at": str|None,       # timestamp of appeal, set on appeal
     }
 
 Plus one extra field not in the spec's example but needed for the Appeal
@@ -41,9 +41,14 @@ def _load():
         return []
     with open(_LOG_PATH, "r") as f:
         try:
-            return json.load(f)
+            data = json.load(f)
         except json.JSONDecodeError:
             return []
+    # Guard against stale/incompatible formats (e.g. an old dict-keyed
+    # version of this file) rather than crashing or silently misreading it.
+    if not isinstance(data, list):
+        return []
+    return data
 
 
 def _save(entries):
@@ -56,16 +61,23 @@ def _utc_timestamp():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
 
 
-def create_entry(content_id, creator_id, text, attribution, confidence, llm_score, status="classified"):
+def create_entry(content_id, creator_id, text, attribution, transparency_label,
+                  confidence, llm_score, stylometric_score, votes, status="classified"):
     """Append one structured entry to the audit log. Returns the entry."""
     entry = {
         "content_id": content_id,
         "creator_id": creator_id,
         "timestamp": _utc_timestamp(),
         "attribution": attribution,
+        "transparency_label": transparency_label,
         "confidence": confidence,
         "llm_score": llm_score,
+        "stylometric_score": stylometric_score,
+        "votes": votes,
         "status": status,
+        "appeal_filed": False,
+        "appeal_reasoning": None,
+        "appealed_at": None,
         "text": text,
     }
     with _LOCK:
@@ -85,19 +97,24 @@ def get_entry(content_id):
     return None
 
 
-def update_status(content_id, status, appeal_info=None):
-    """Update the status (and optional appeal info) of an entry in place.
+def file_appeal(content_id, appeal_reasoning, status="under_review"):
+    """
+    Record an appeal against an existing submission, in place.
 
-    Used by the Appeal flow (Milestone 5). Returns the updated entry, or
-    None if content_id isn't found.
+    Sets status (default "under_review"), appeal_reasoning, and
+    appealed_at on the existing entry — alongside (not replacing) the
+    original classification decision already stored there.
+
+    Returns the updated entry, or None if content_id isn't found.
     """
     with _LOCK:
         entries = _load()
         for entry in entries:
             if entry["content_id"] == content_id:
                 entry["status"] = status
-                if appeal_info is not None:
-                    entry["appeal"] = appeal_info
+                entry["appeal_filed"] = True
+                entry["appeal_reasoning"] = appeal_reasoning
+                entry["appealed_at"] = _utc_timestamp()
                 _save(entries)
                 return entry
     return None

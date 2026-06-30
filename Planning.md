@@ -4,7 +4,9 @@ Provenance Guard is an API endpoint that accepts a piece of text-based content (
 ## Detection Signals
 I will be incorporating 2 signals for text detection:
 1. LLM-based classification (Groq): it'll ask the model to assess whether text reads as human or AI-generated. Captures semantic and stylistic coherence holistically. This signal will output a binary flag (human vs AI)
-2. Stylometric heuristics: Measures statistical properties in terms of proportion that differ between human and AI writing — sentence length variance, type-token ratio (vocabulary diversity), punctuation density, or average sentence complexity. For instance, AI text tends to be more uniform; human writing is more variable. This signal will output a series of values ranging in proportions to numerical values corresponding to each of the three metrics they evaluate
+2. Stylometric heuristics: Measures statistical properties in terms of proportion that differ between human and AI writing — sentence length variance, type-token ratio (vocabulary diversity), punctuation density. For instance, AI text tends to be more uniform; human writing is more variable. This signal will output a series of values ranging in proportions to numerical values corresponding to each of the three metrics they evaluate
+
+UPDATE: Type-token ratio performs poorly at shorter responses, so I will be swapping this with average sentence complexity. 
 
 I'll combine these two detection signals into a confidence score through majority vote. Essentially, each signal will vote on a label, and the confidence score will be the proportion of votes for human label. 
 
@@ -74,6 +76,26 @@ For my fourth checkpoint, which includes the implementation of the second signal
 
 For my fifth checkpoint, which includes the implementation of the production layer, I'll provide Claude my label variants, appeals workflow and architecture diagram to generate the label generation logic and appeal enpoint. I'll verify by testing all three label variants are reachable and that an appeal updates status correctly. 
 
+## Test Inputs
+
+1. AI
+curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "In 2026, the deepening \"K-shaped\" economy signifies a growing disparity where high-income households contribute significantly to economic growth, benefiting from rising assets and investments, while lower-income groups face economic contraction, limited job opportunities, and widening income inequality, potentially leading to increased social and economic divides.", "creator_id": "u1"}'
+
+2. Human
+curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "Ive seen people already watching it on Prime or Apple TV. I wanna watch it today but is just not available here in Mexico. Ive seen people struggling from other countries. Have anyone managed to see it with a VPN or some other place?", "creator_id": "u2"}'
+
+3. Human
+curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "I backpacked in western Euripe for a few weeks when I was 20. It was fun. I stayed at youth hostels. At the time I was going to university in London and we were on spring break. My friend ran out of money during our first stop in Amsterdam. I figured I could always go back to London if I felt that I needed to. Instead I kept meeting travel companions at new hostels that I could spend time with and often we went to the next country together. I met lots of people my age from all over the world.", "creator_id": "u2"}'
+
+4. Human (formal writing from 2018)
+curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "In 2018 companies continue to look for ways to cut through the noise, create mindshare, and establish themselves and both experts and influencers. AI-driven marketing, social targeting, and general content marketing are the predominant solution for most, but the biggest shift right now is in the channels being used to distribute this thought leadership.", "creator_id": "u3"}'
+
+5. AI
+curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "Classification: Fish belong to the phylum Chordata and represent a paraphyletic group, meaning they include various evolutionary lines but exclude their tetrapod descendants (amphibians, reptiles, birds, and mammals).", "creator_id": "u4"}'
+
+
+Appeal: #4 Content Id
+curl -s -X POST http://127.0.0.1:5001/appeal -H "Content-Type: application/json" -d '{"content_id": "5e132079-dfc0-4580-95aa-b19cba48ed87", "creator_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren'\''t well-known."}' | python -m json.tool
 
 
 

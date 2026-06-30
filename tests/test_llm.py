@@ -7,7 +7,11 @@ Usage:
     python test_signals.py
 """
 
-from signals import llm_classification_signal
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+
+from llm_classification_signal import llm_classification_signal
 
 TEST_CASES = [
     {

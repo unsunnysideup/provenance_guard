@@ -107,6 +107,20 @@ Audit Log Results:
 ## Appeals Workflow
 Users can submit an appeal providing the text. The system updates the status to "Under Review", log the appeal alongisde the original classification decision in the audit log, and returns a confirmation to the user that the appeal was received. 
 
+Example:
+{
+curl -s -X POST http://127.0.0.1:5001/appeal -H "Content-Type: application/json" -d '{"content_id": "5e132079-dfc0-4580-95aa-b19cba48ed87", "creator_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren'\''t well-known."}' | python -m json.tool
+}
+
+Result:
+{
+    "status": "under_review",
+    "appeal_filed": true,
+    "appeal_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren't well-known.",
+    "appealed_at": "2026-07-01T00:20:15.559Z",
+    "text": "In 2018 companies continue to look for ways to cut through the noise, create mindshare, and establish themselves and both experts and influencers. AI-driven marketing, social targeting, and general content marketing are the predominant solution for most, but the biggest shift right now is in the channels being used to distribute this thought leadership."
+  }
+
 ## Rate Limiting
 I chose to implemenent a rate limiting of 10 per min, as per common standards I researched online.
 

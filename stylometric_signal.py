@@ -20,27 +20,6 @@ Metrics (direction: higher score = more human-like):
     3. Punctuation density — punctuation marks per word. The weakest/
        noisiest of the three metrics, given the lowest weight.
 
-WHY THIS REPLACED TYPE-TOKEN RATIO:
-An earlier version used type-token ratio (vocabulary diversity) instead of
-sentence complexity. On short inputs (40-60 words), TTR is naturally high
-for *any* text regardless of origin — there isn't enough length for words
-to repeat yet — so it had almost no discriminating power and, in testing,
-caused a textbook AI-generated paragraph to incorrectly vote "human"
-(TTR alone said 0.88, dragging the combined score above the 0.5 threshold
-despite the text being full of AI-style hedging language). Average
-sentence complexity catches that hedging pattern directly. On the same
-test paragraph, this single change flipped the vote from "human" (0.647)
-to the correct "ai" (0.382) — see test_stylometric_signal.py.
-
-KNOWN LIMITATION OF THIS METRIC (documented, not hidden):
-The clause-connector word list is a fixed heuristic set, not real parsing.
-It under-counts complexity in long sentences that pack in compound noun
-phrases without using commas or connector words (e.g. dense academic
-prose like "...face a fundamental tension between their mandate for price
-stability and the unintended consequences of prolonged low interest
-rates..."). That's why sentence length (word count) is also folded into
-this metric, not just connector words alone — length alone catches what
-connector-counting misses, partially.
 """
 
 import re

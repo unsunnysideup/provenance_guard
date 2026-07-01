@@ -451,7 +451,7 @@
     "status": "under_review",
     "appeal_filed": true,
     "appeal_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren't well-known.",
-    "appealed_at": "2026-06-30T22:32:36.955Z",
+    "appealed_at": "2026-07-01T00:20:15.559Z",
     "text": "In 2018 companies continue to look for ways to cut through the noise, create mindshare, and establish themselves and both experts and influencers. AI-driven marketing, social targeting, and general content marketing are the predominant solution for most, but the biggest shift right now is in the channels being used to distribute this thought leadership."
   },
   {
@@ -833,5 +833,62 @@
     "appeal_reasoning": null,
     "appealed_at": null,
     "text": "This is a test submission for rate limit testing purposes only."
+  },
+  {
+    "content_id": "5b998875-9929-4e2c-ada2-18b1bf360055",
+    "creator_id": "u3",
+    "timestamp": "2026-07-01T00:20:31.341Z",
+    "attribution": "uncertain",
+    "transparency_label": "I am unable to determine whether this text is written by a human or an AI.",
+    "confidence": 0.5,
+    "llm_score": 0.8,
+    "stylometric_score": 0.0,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "ai"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "Russian President Vladimir Putin has publicly acknowledged that Ukrainian long-range strikes are creating fuel supply problems inside Russia, as videos obtained by Fox News Digital show long lines, angry motorists and fights erupting at filling stations across several Russian regions."
+  },
+  {
+    "content_id": "4124e9c7-fe0f-4312-953a-b9d838b27111",
+    "creator_id": "u3",
+    "timestamp": "2026-07-01T00:20:54.196Z",
+    "attribution": "likely_human",
+    "transparency_label": "This text is likely to be written by human",
+    "confidence": 1.0,
+    "llm_score": 0.9,
+    "stylometric_score": 0.786,
+    "votes": {
+      "llm_classification": "human",
+      "stylometric_heuristics": "human"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there."
+  },
+  {
+    "content_id": "77db2483-0c40-4d70-af32-23808e29536c",
+    "creator_id": "u1",
+    "timestamp": "2026-07-01T00:46:47.015Z",
+    "attribution": "likely_ai",
+    "transparency_label": "This text is likely to be written by AI",
+    "confidence": 0.0,
+    "llm_score": 0.8,
+    "stylometric_score": 0.0606,
+    "votes": {
+      "llm_classification": "ai",
+      "stylometric_heuristics": "ai"
+    },
+    "status": "classified",
+    "appeal_filed": false,
+    "appeal_reasoning": null,
+    "appealed_at": null,
+    "text": "In 2026, the deepening \"K-shaped\" economy signifies a growing disparity where high-income households contribute significantly to economic growth, benefiting from rising assets and investments, while lower-income groups face economic contraction, limited job opportunities, and widening income inequality, potentially leading to increased social and economic divides."
   }
 ]

@@ -5,8 +5,6 @@ Per the spec, this signal asks a model to assess whether a piece of text
 reads as human- or AI-generated, capturing semantic/stylistic coherence
 holistically. It outputs a single binary flag: "human" or "ai".
 
-This file is meant to be testable on its own (see test_signals.py) before
-being wired into the /submit endpoint.
 """
 
 import os

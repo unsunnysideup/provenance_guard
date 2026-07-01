@@ -35,7 +35,7 @@ Users can submit an appeal providing the text. The system updates the status to 
 ## Anticipated Edge Cases
 My system might handle the following poorly:
 1. Formal literature: Formal essays or responses have textual patterns similar to Ai-generated text. 
-2. Poems with heavy use of repetition and simple vocabulry
+2. Poems with heavy use of repetition and simple vocabulary
 
 ## Architecture
 Submission Flow                                         Appeal Flow

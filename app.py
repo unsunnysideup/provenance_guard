@@ -5,10 +5,6 @@ Submission flow (per architecture diagram):
     POST /submit -> LLM signal -> Stylometric signal -> Confidence scoring
                  -> Transparency label -> Audit log -> Response
 
-Status: Both signals (LLM classification + stylometric heuristics) are
-wired in, combined via majority vote, and every submission writes a
-structured entry to the audit log including both signals' individual
-scores alongside the combined confidence.
 """
 
 import uuid

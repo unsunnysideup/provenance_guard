@@ -94,4 +94,11 @@ curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json"
 curl -s -X POST http://127.0.0.1:5001/submit -H "Content-Type: application/json" -d '{"text": "Classification: Fish belong to the phylum Chordata and represent a paraphyletic group, meaning they include various evolutionary lines but exclude their tetrapod descendants (amphibians, reptiles, birds, and mammals).", "creator_id": "u4"}'
 
 Appeal: #4 Content Id
-curl -s -X POST http://127.0.0.1:5001/appeal -H "Content-Type: application/json" -d '{"content_id": "5e132079-dfc0-4580-95aa-b19cba48ed87", "creator_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren'\''t well-known."}' | python -m json.tool
+curl -s -X POST http://127.0.0.1:5001/appeal -H "Content-Type: application/json" -d '{"content_id": "db10f010-6c43-4687-b8b2-a1988d414dd5", "creator_reasoning": "It was written in Forbes back in 2018 when LLMs and NLPs weren'\''t well-known."}' | python -m json.tool
+
+## Rate Limiting Testing
+for i in $(seq 1 12); do
+  curl -s -o /dev/null -w "%{http_code}\n" -X POST http://127.0.0.1:5001/submit \
+    -H "Content-Type: application/json" \
+    -d '{"text": "This is a test submission for rate limit testing purposes only.", "creator_id": "ratelimit-test"}'
+done
